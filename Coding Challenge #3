@@ -1,0 +1,26 @@
+const scoreDolphins1 = 97
+const scoreDolphins2 = 112
+const scoreDolphins3 = 101
+const scoreKoalas1 = 109
+const scoreKoalas2 = 95
+const scoreKoalas3 = 106
+
+const avgScoreDolphins = (scoreDolphins1 + scoreDolphins2 + scoreDolphins3) / 3
+
+const avgScoreKoalas = (scoreKoalas1 + scoreKoalas2 + scoreKoalas3) / 3
+
+console.log(`Average score of team Dolphins is ${avgScoreDolphins.toFixed(2)}`)
+
+console.log(`Average score of team Koalas is ${avgScoreKoalas.toFixed(2)}`)
+
+if (avgScoreDolphins > avgScoreKoalas && avgScoreDolphins >= 100)
+    console.log("Hence, Dolphins win the trophy! 🥳")
+
+else if (avgScoreKoalas > avgScoreDolphins && avgScoreDolphins >= 100)
+    console.log("Hence, Koalas win the trophy! 🥳")
+
+else if (avgScoreDolphins === avgScoreKoalas && avgScoreDolphins >= 100 && avgScoreKoalas >= 100)
+    console.log("Its a draw! Both teams win the trophy 🥳")
+
+else if (avgScoreDolphins < 100 || avgScoreKoalas < 100)
+    console.log("No team wins the trophy 😭")
