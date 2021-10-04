@@ -1,0 +1,20 @@
+let heightMark = 1.88
+let heightJohn = 1.76
+let massMark = 95
+let massJohn = 85
+let bmiMark
+let bmiJohn
+
+console.log("Mark's BMI: ")
+bmiMark = massMark / heightMark ** 2
+console.log(bmiMark.toFixed(2))
+
+console.log("John's BMI: ")
+bmiJohn = massJohn / heightJohn ** 2
+console.log(bmiJohn.toFixed(2))
+
+if (bmiMark > bmiJohn)
+    console.log(`Mark's BMI(${bmiMark.toFixed(2)}) is higher than John's (${bmiJohn.toFixed(2)})`)
+
+else
+    console.log(`John's BMI (${bmiJohn.toFixed(2)}) is higher than Mark's (${bmiMark.toFixed(2)})`)
