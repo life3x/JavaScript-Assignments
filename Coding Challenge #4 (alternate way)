@@ -1,0 +1,6 @@
+//learnt to use Ternary Operators
+const billValue = Number(prompt("Enter the bill value"))
+
+console.log(`The bill value is ${billValue}, 
+the tip value is ${billValue >= 50 && billValue <= 300 ? billValue * 15 / 100 : billValue * 20 / 100} and 
+the total value is ${billValue >= 50 && billValue <= 300 ? billValue + (billValue * 15 / 100) : billValue + (billValue * 20 / 100)}`)
