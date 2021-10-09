@@ -1,0 +1,28 @@
+//coding challenge #1 (JavaScript Fundamentals Part 2)
+const calcAverageDolphins = (scoreDolphins1, scoreDolphins2, scoreDolphins3) => {
+    const avgScoreDolphins = (scoreDolphins1 + scoreDolphins2 + scoreDolphins3) / 3;
+    return avgScoreDolphins;
+}
+
+const calcAverageKoalas = (scoreKoalas1, scoreKoalas2, scoreKoalas3) => {
+    const avgScoreKoalas = (scoreKoalas1 + scoreKoalas2 + scoreKoalas3) / 3;
+    return avgScoreKoalas;
+}
+
+const scoreDolphins = calcAverageDolphins(5, 2, 1)
+const scoreKoalas = calcAverageKoalas(23, 34, 27)
+
+function checkWinner(avgDolphins, avgKoalas) {
+    const dolphinWinMsg = `Dolphins win 🏆(${avgDolphins.toFixed(2)} vs. ${avgKoalas.toFixed(2)})`
+    const koalasWinMsg = `Koalas win 🏆(${avgKoalas.toFixed(2)} vs. ${avgDolphins.toFixed(2)})`
+
+
+    if (avgDolphins >= avgKoalas * 2)
+        console.log(dolphinWinMsg);
+    else if (avgKoalas >= avgDolphins * 2)
+        console.log(koalasWinMsg);
+    else
+        console.log('No team wins 😭')
+}
+
+checkWinner(scoreDolphins, scoreKoalas)
