@@ -1,0 +1,24 @@
+//Coding Challenge #2 from JavaScript Fundamentals 2
+
+function calcTip(billValue) {
+    const tipCalc1 = billValue * 15 / 100
+    const tipCalc2 = billValue * 20 / 100
+
+    if (billValue >= 50 && billValue <= 300)
+        return tipCalc1;
+    else
+        return tipCalc2;
+}
+
+const bills = [125, 555, 44]
+
+console.log(`Your tip value is ${calcTip(bills[0])} for the bill value ${bills[0]}`)
+console.log(`Your tip value is ${calcTip(bills[1])} for the bill value ${bills[1]}`)
+console.log(`Your tip value is ${calcTip(bills[2])} for the bill value ${bills[2]}`)
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+console.log(total[0])
+console.log(total[1])
+console.log(total[2])
