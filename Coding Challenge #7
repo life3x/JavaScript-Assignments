@@ -1,0 +1,33 @@
+//Coding Challenge #3 from JavaScript Fundaments Part 2
+//Author: Abhirath Dubey
+//Date: 13th Oct., 2021
+
+const markDetails = {
+    fullName: 'Mark Miller',
+    markMass: 78,
+    markHeight: 1.69,
+    calcBMIMark: function () {
+        this.markBMI = this.markMass / (this.markHeight * this.markHeight)
+        return this.markBMI.toFixed(2);
+    }
+}
+
+const johnDetails = {
+    fullName: 'John Smith',
+    johnMass: 92,
+    johnHeight: 1.95,
+    calcBMIJohn: function () {
+        this.johnBMI = this.johnMass / (this.johnHeight * this.johnHeight)
+        return this.johnBMI.toFixed(2);
+    }
+}
+
+console.log(markDetails.calcBMIMark())
+console.log(johnDetails.calcBMIJohn())
+
+
+if (markDetails.markBMI > johnDetails.johnBMI)
+    console.log(`${markDetails.fullName}'s BMI (${markDetails.markBMI.toFixed(2)}) is higher than ${johnDetails.fullName}'s (${johnDetails.johnBMI.toFixed(2)})`)
+
+else if (johnDetails.johnBMI > markDetails.markBMI)
+    console.log(`${johnDetails.fullName}'s BMI (${johnDetails.johnBMI.toFixed(2)}) is higher than ${markDetails.fullName}'s (${markDetails.markBMI.toFixed(2)})`)
