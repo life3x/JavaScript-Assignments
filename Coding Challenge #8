@@ -1,0 +1,40 @@
+//Author: Abhirath Dubey
+//Coding Challenge #4 from JavaSxript Fundamentals Part 2
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(billValue) {
+    const tipValue1 = billValue * 15 / 100
+    const tipValue2 = billValue * 20 / 100
+
+    if (billValue >= 50 && billValue <= 300)
+        return tipValue1;
+    else
+        return tipValue2
+}
+
+
+for (let i = 0; i < bills.length; i++) {
+    console.log(`Tip value for bill amount ${bills[i]}: ${calcTip(bills[i])}`)
+
+    tips[i] = calcTip(bills[i])
+    totals[i] = calcTip(bills[i]) + bills[i]
+}
+
+console.log(totals)
+
+//Bonus Challenge from coding challenge #4
+let sum = 0;
+let sum2 = 0;
+
+function calcAverage(array) {
+    return array / totals.length;
+}
+
+for (let i = 0; i < totals.length; i++) {
+    sum = sum + totals[i]
+    sum2 = sum2 + tips[i]
+}
+console.log(`Total: ${sum}`)
+console.log(`Average: ${calcAverage(sum)}`)
