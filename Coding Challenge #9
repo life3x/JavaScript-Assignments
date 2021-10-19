@@ -1,0 +1,13 @@
+//Coding Challenge #1 from Developer Skills and Editor Setup
+const arr = [17, 21, 23];
+let sum = 0;
+
+function printForecast(tempArr) {
+  for (let i = 0; i < tempArr.length; ++i) {
+    for (let a = 1; a <= 1; ++a) {
+      sum += a;
+      console.log(`...${tempArr[i]}°C in ${sum} days`);
+    }
+  }
+}
+printForecast(arr);
